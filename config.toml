@@ -1,4 +1,4 @@
-baseURL = 'http://dominikmarcinowski.github.io/'
+baseURL = 'https://dominikmarcinowski.github.io/'
 languageCode = 'en-us'
 title = 'Dominik Marcinowski'
 copyright = "This work is licenesed under the <a href=\"https://unlicense.org\" target=\"_blank\">unlicenese</a>."
