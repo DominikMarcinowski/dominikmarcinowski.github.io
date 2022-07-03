@@ -1,0 +1,94 @@
+.button-container {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button,
+.button,
+a.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: color(bg-dark);
+
+  &.outline {
+    background: transparent;
+    box-shadow: none;
+    padding: 8px 18px;
+    border-color: color(bg-light);
+
+    :hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &.primary {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+
+    &:hover {
+      box-shadow: 0 2px 6px rgba(50, 50, 93, .21), 0 1px 3px rgba(0, 0, 0, .08);
+    }
+  }
+
+  &.link {
+    background: none;
+    font-size: 1rem;
+  }
+
+  &.small {
+    font-size: .8rem;
+  }
+
+  &.wide {
+    min-width: 200px;
+    padding: 14px 24px;
+  }
+}
+
+.sharing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .resp-sharing-button__icon,
+  .resp-sharing-button__link {
+    display: inline-block;
+  }
+
+  .resp-sharing-button__link {
+    text-decoration: none;
+    margin: 0.5em;
+  }
+
+  .resp-sharing-button {
+    border-radius: 5px;
+    transition: 25ms ease-out;
+    padding: 0.5em 0.75em;
+    font-family: font(sans);
+  }
+
+  .resp-sharing-button__icon svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
+    vertical-align: top;
+  }
+
+  .resp-sharing-button--small svg {
+    margin: 0;
+    vertical-align: middle;
+  }
+}

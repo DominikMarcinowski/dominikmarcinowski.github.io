@@ -1,0 +1,14 @@
+$fonts: (
+  "sans": "Inter, -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Arial, Helvetica, sans-serif",
+  "mono": "'Iosevka Fixed Web', Consolas, Courier, monospace",
+);
+
+@function font($name) {
+  @return var(--fnt-#{ $name});
+}
+
+:root {
+  @each $name, $value in $fonts {
+    --fnt-#{$name}: #{$value};
+  }
+}

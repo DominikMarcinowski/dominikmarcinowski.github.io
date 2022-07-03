@@ -1,0 +1,100 @@
+baseURL = 'http://dominikmarcinowski.github.io/'
+languageCode = 'en-us'
+title = 'Dominik Marcinowski'
+copyright = "This work is licenesed under the <a href=\"https://unlicense.org\" target=\"_blank\">unlicenese</a>."
+
+paginate  = 10
+rssLimit  = 10
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+  portfolio = "/portfolio/:title/"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About me"
+    url = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "posts/"
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "projects/"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[author]
+  name = "Dominik Marcinowski"
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[params]
+  homeSubtitle = "Programmer for fun."
+  enableThemeToggle = true
+
+  [params.footer]
+    trademark = true
+    rss = false
+    copyright = true
+    author = true
+
+    topText = []
+    bottomText = []
+
+  [params.favicon.color]
+    mask = "#292c33"
+    msapplication = "#292c33"
+    theme = "#292c33"
+
+  [params.logo]
+    logoMark     = " "
+    logoText     = "~ sweet ~"
+    logoHomeLink = "/"
+    logoCursorDisabled = true
+    logoCursorColor = "#61AFEF"
+
+  [params.portrait]
+    path = "/images/avatar.webp"
+    alt = "Portrait"
+    maxWidth = "200px"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/DominikMarcinowski"
+  # [[params.social]]
+  #   name = "anilist"
+  #   url = "https://anilist.co/user/DominikMarcinowski/"
+  [[params.social]]
+    name = "discord"
+    url = "https://discordapp.com/users/329900630955261952"
+  [[params.social]]
+    name = "email"
+    url  = "mailto:dmarcinowski@zoho.com"

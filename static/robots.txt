@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /about
+Disallow: /projects
+Sitemap: https://dominikmarcinowski.github.io/sitemap.xml

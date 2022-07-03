@@ -1,0 +1,67 @@
+.code-toolbar {
+  position: relative;
+  margin-bottom: 20px;
+
+  &:focus-within > .toolbar { opacity: 1; }
+  &:hover > .toolbar { opacity: 1; }
+}
+
+.code-toolbar > .toolbar {
+  position: absolute;
+  top: .5em;
+  right: .6em;
+  z-index: 1;
+
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+
+  .toolbar-item {
+    display: inline-block;
+    
+    &:not(:first-child) { margin-left: .3em; }
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    background: color(bg-light);
+  }
+
+  button {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+
+    @include user-select(none);
+  }
+
+  span {
+    color: color(fg-sel);
+    font-size: .8em;
+    padding: .3em .5em;
+    background: color(bg-sel);
+    border-radius: .3em;
+    
+    &:hover, &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

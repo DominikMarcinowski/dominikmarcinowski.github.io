@@ -1,0 +1,13 @@
+{{ $type := .Get "type" }}
+{{ $icon := "" }}
+{{ if (eq $type "warning") }}
+    {{ $icon = "warning" }}
+{{ else if (eq $type "danger") }}
+    {{ $icon = "times" }}
+{{ else if (eq $type "info") }}
+    {{ $icon = "info" }}
+{{ end }}
+<div class="alert alert-{{ $type }}" role="alert">
+    <i class="fa fa-{{ $icon }}"></i>
+    {{ .Get "content" }}
+</div>

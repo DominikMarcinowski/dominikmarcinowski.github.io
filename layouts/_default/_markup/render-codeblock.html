@@ -1,0 +1,7 @@
+{{ $class := .Attributes.class | default ""    }}
+{{ $lang  := .Attributes.lang  | default .Type }}
+{{ if transform.CanHighlight $lang }}
+<div class="{{ $class }} .minimal-scrollbars">{{ highlight .Inner $lang }}</div>
+{{else}}
+<pre><code class="{{ $class }}">{{.Inner}}</code></pre>
+{{end}}

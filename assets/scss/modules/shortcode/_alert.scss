@@ -1,0 +1,30 @@
+.alert {
+    // background: $dark-background-header;
+    background-color: color(bg-dark);
+    padding: .5em .6em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+    
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 2em 1fr;
+    align-items: center;
+
+    .fa {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    &-warning .fa-warning {
+        font-size: 1.2em;
+        color: color("yellow");
+    }
+    
+    &-danger .fa-times {
+        color: color("red");
+    }
+
+    &-info .fa-info {
+        color: color("fg");
+    }
+}

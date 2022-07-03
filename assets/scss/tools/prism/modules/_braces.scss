@@ -1,0 +1,15 @@
+// Rainbow matching braces
+
+.rainbow-braces .token.punctuation {
+  &.brace-level-1, &.brace-level-5, &.brace-level-9
+  { color: color(string); }
+  
+  &.brace-level-2, &.brace-level-6, &.brace-level-10
+  { color: color(keyword); }
+  
+  &.brace-level-3, &.brace-level-7, &.brace-level-11
+  { color: color(variable); }
+  
+  &.brace-level-4, &.brace-level-8, &.brace-level-12
+  { color: color(number); }
+}

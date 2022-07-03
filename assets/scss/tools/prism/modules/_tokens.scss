@@ -1,0 +1,43 @@
+// Syntax hilighting for specific tokens.
+
+.token {
+  position: relative;
+  z-index: 1;
+
+  &.comment, &.prolog, &.doctype, &.cdata
+  { color: color(comment); }
+
+  &.punctuation, &.operator
+  { color: color(fg); }
+
+  &.boolean, &.number, &.tag, &.deleted
+  { color: color(number); }
+  
+  &.string, &.char, &.url, &.regex, &.important
+  { color: color(string); }
+
+  &.keyword, &.property, &.selector, &.constant, &.symbol, &.builtin
+  { color: color(keyword); }
+  
+  &.variable, &.atrule
+  { color: color(variable); }
+
+  &.attributes, &.namespace, &.class-name, &.return-type, &.quoted-symbol,
+  &.attr-name, &.attr-value, &.entity, &.inserted
+  { color: color(attribute); }
+
+  &.function, &.macro, &.car,
+  .language-emacs-lisp &.lambda > &.keyword
+  { color: color(function); }
+
+  &.bold, &.important
+  { font-weight: bold; }
+
+  &.italic, &.comment, &.prolog, &.doctype, &.cdata
+  { font-style: italic; }
+}
+
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative;
+}

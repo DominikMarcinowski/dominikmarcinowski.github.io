@@ -1,0 +1,78 @@
+$colors: (
+  "dark": (
+    "acc": hsl(218, 100%, 58%),
+    "bg": hsl(222, 11%, 18%),
+    "bg-dark": hsl(216, 13%, 15%),
+    "bg-light": hsl(223, 13%, 21%),
+    "bg-active": hsl(219, 13%, 25%),
+    "fg": hsl(218, 12%, 64%),
+    "fg-dark": hsl(217, 8%, 45%),
+    "btn": hsl(222, 13%, 26%),
+    "btn-hl": hsl(221, 13%, 25%),
+    "red": hsl(357, 81%, 69%),
+    "blue": hsl(207, 82%, 66%),
+    "green": hsl(95, 38%, 62%),
+    "yellow": hsl(39, 67%, 69%),
+    "bg-sel": hsl(222, 13%, 26%),
+    "fg-sel": hsl(0, 0%, 100%),
+    "comment": hsl(215, 11%, 39%),
+    "variable": hsl(187, 47%, 55%),
+    "link": hsl(187, 47%, 55%),
+    "function": hsl(207, 82%, 66%),
+    "keyword": hsl(286, 60%, 67%),
+    "tag": hsl(357, 81%, 69%),
+    "string": hsl(95, 38%, 62%),
+    "operator": hsl(207, 82%, 66%),
+    "attribute": hsl(39, 67%, 69%),
+    "number": hsl(29, 54%, 61%),
+    "parameter": hsl(219, 14%, 71%),
+  ),
+  "light": (
+    "acc": hsl(218, 100%, 58%),
+    "bg": hsl(0, 0%, 90%),
+    "bg-dark": hsl(0, 0%, 86%),
+    "bg-light": hsl(0, 0%, 94%),
+    "bg-active": hsl(0, 0%, 98%),
+    "fg": hsl(228, 8%, 24%),
+    "fg-dark": hsl(240, 6%, 14%),
+    "btn": hsl(231, 4%, 64%),
+    "btn-hl": hsl(220, 2%, 52%),
+    "red": hsl(5, 74%, 59%),
+    "blue": hsl(207, 82%, 66%),
+    "green": hsl(119, 34%, 47%),
+    "yellow": hsl(39, 67%, 69%),
+    "bg-sel": hsl(207, 74%, 66%),
+    "fg-sel": hsl(0, 0%, 98%),
+    "comment": hsl(215, 11%, 39%),
+    "variable": hsl(220, 2%, 52%),
+    "link": hsl(220, 2%, 52%),
+    "function": hsl(221, 87%, 60%),
+    "keyword": hsl(301, 63%, 40%),
+    "tag": hsl(5, 74%, 59%),
+    "string": hsl(119, 34%, 47%),
+    "operator": hsl(221, 87%, 60%),
+    "attribute": hsl(41, 99%, 30%),
+    "number": hsl(41, 99%, 38%),
+    "parameter": hsl(231, 4%, 64%),
+  ),
+);
+
+// Function to get color based on name
+
+@function color($name) {
+  @return var(--clr-#{ $name});
+}
+
+// Generate css color variables
+
+:root[data-theme="dark"] {
+  @each $name, $color in map-get($colors, "dark") {
+    --clr-#{$name}: #{$color};
+  }
+}
+
+:root[data-theme="light"] {
+  @each $name, $color in map-get($colors, "light") {
+    --clr-#{$name}: #{$color};
+  }
+}
